@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Día que se Rompió el Mundo - Una Guía de Supervivencia para el Alzheimer</title>
+    <meta name="description" content="Una guía de supervivencia para los primeros 90 días con el Alzheimer, escrita por alguien que ha estado exactamente donde tú estás.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- ESTILOS GENERALES Y RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.7;
+            color: #2F2F2F; /* Gris Grafito */
+            background-color: #FCFCF9; /* Blanco Lino */
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .narrow-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+            color: #5B7588; /* Azul Niebla */
+            line-height: 1.3;
+        }
+        
+        section {
+            padding: 100px 0;
+        }
+
+        /* --- BOTONES DE LLAMADA A LA ACCIÓN --- */
+        .cta-button {
+            display: inline-block;
+            background: #E8B95E; /* Dorado Faro */
+            color: #2F2F2F;
+            padding: 18px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-family: 'Source Sans Pro', sans-serif;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        /* --- SECCIÓN 1: HERO (LA PROMESA INMEDIATA) --- */
+        .hero {
+            background-color: #5B7588;
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .hero-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            font-family: 'Source Sans Pro', sans-serif;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        /* --- SECCIÓN 2: EMPATÍA (EL ESPEJO) --- */
+        #empathy {
+            background: #FCFCF9;
+        }
+
+        #empathy h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .empathy-text {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            text-align: left;
+            columns: 2;
+            column-gap: 60px;
+        }
+        
+        .empathy-text p {
+            margin-bottom: 20px;
+        }
+
+        /* --- SECCIÓN 3: SOLUCIÓN (EL MAPA) --- */
+        #solution {
+            background: #F1F3F4; /* Un gris muy claro para contraste */
+        }
+        
+        .solution-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .book-mockup img {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0px 20px 30px rgba(0,0,0,0.1));
+        }
+        
+        #solution h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .solution-list {
+            list-style: none;
+        }
+        
+        .solution-list li {
+            margin-bottom: 25px;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+        
+        .solution-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #E8B95E; /* Dorado Faro */
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .solution-list strong {
+            font-weight: 600;
+            color: #2F2F2F;
+        }
+
+        /* --- SECCIÓN 4: VALOR GRATUITO (EL ANCLA) --- */
+        #free-value {
+            text-align: center;
+        }
+
+        #free-value h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        #free-value .subtitle {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+            color: #555;
+        }
+
+        .pdf-preview {
+            background: white;
+            border: 1px solid #E0E0E0;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            text-align: left;
+        }
+
+        .pdf-preview h3 {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .pdf-preview ul {
+            list-style: none;
+        }
+        
+        .pdf-preview li {
+            font-size: 1.1rem;
+            padding: 10px 0;
+            border-bottom: 1px solid #EEE;
+        }
+        
+        .pdf-preview li:last-child {
+            border-bottom: none;
+        }
+
+        /* --- SECCIÓN 5: AUTOR (LA CONFIANZA) --- */
+        #author {
+            background: #F1F3F4;
+        }
+        
+        .author-content {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .author-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+        
+        #author h2 {
+            margin-bottom: 20px;
+        }
+        
+        .author-text p {
+            font-size: 1.15rem;
+            margin-bottom: 15px;
+        }
+
+        /* --- FORMULARIO FINAL (LA CONVERSIÓN) --- */
+        #final-cta {
+            background-color: #2F2F2F;
+            color: white;
+            text-align: center;
+        }
+
+        #final-cta h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        #final-cta p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+        }
+        
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        /* ESTILOS PARA QUE NUESTROS INPUTS SE VEAN BIEN */
+        .ml-block-form input[type="text"],
+        .ml-block-form input[type="email"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            border: 2px solid #555;
+            border-radius: 8px;
+            background: #444;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .ml-block-form input[type="text"]:focus,
+        .ml-block-form input[type="email"]:focus {
+            outline: none;
+            border-color: #E8B95E;
+        }
+
+        .ml-block-form button.primary {
+            width: 100%;
+        }
+
+        .ml-form-successBody p {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1.2rem !important;
+        }
+        
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            h1, h2, h3 { line-height: 1.2; }
+            .hero-content h1 { font-size: 2.2rem; }
+            .hero-content h2 { font-size: 1.2rem; }
+            section { padding: 60px 0; }
+            .empathy-text { columns: 1; }
+            .solution-content, .author-content { grid-template-columns: 1fr; text-align: center; }
+            .book-mockup img { max-width: 80%; margin: 0 auto 30px auto; }
+            .author-photo { margin: 0 auto 30px auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SECCIÓN 1: HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>El mundo acaba de romperse. Tu trabajo es no romperte con él.</h1>
+                <h2>Una guía de supervivencia para los primeros 90 días con el Alzheimer. El mapa que necesitas cuando te sientes perdido en la tormenta.</h2>
+                <a href="#free-value" class="cta-button">EMPEZAR A TOMAR EL CONTROL (GRATIS)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: EMPATÍA -->
+    <section id="empathy">
+        <div class="narrow-container">
+            <h2>Si estás leyendo esto, sé exactamente cómo te sientes.</h2>
+            <div class="empathy-text">
+                <p>Ese nudo en la garganta. El zumbido en los oídos. La sensación de irrealidad, como si vieras el mundo a través de un cristal empañado. Acabas de recibir un diagnóstico que no solo cambia el futuro de tu ser querido, sino que ha hecho estallar el tuyo.</p>
+                <p>Te sientes solo. Asustado. Y, sobre todo, abrumadoramente perdido. Te han pedido que seas el capitán de un barco en medio de un huracán, pero nadie te ha dado un mapa, una brújula o una sola lección de navegación.</p>
+                <p>Yo estuve en ese barco. Me hundí varias veces. Cometí todos los errores, perseguí falsas esperanzas y me sentí culpable por no saber qué hacer.</p>
+                <p>Este libro es el mapa que construí en medio de esa tormenta. No desde la distancia de un experto, sino desde la trinchera de un hijo que tuvo que aprender a cuidar, a luchar y, finalmente, a encontrar la paz.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: SOLUCIÓN -->
+    <section id="solution">
+        <div class="container">
+            <div class="solution-content">
+                <div class="book-mockup">
+                    <img src="https://raw.githubusercontent.com/ConMaria/El-d-a-que-se-rompi-el-mundo/main/El%20D%C3%ADa%20que%20se%20Rompi%C3%B3%20el%20Mundo%20(3).jpg" alt="Portada del libro El Día que se Rompió el Mundo">
+                </div>
+                <div class="solution-text">
+                    <h2>"El Día que se Rompió el Mundo" es tu plan de batalla.</h2>
+                    <p>Esta guía te llevará de la mano a través del caos de los primeros 90 días para que puedas pasar del pánico a la acción deliberada. Aprenderás a:</p>
+                    <ul class="solution-list">
+                        <li><strong>Construir tu Fortaleza Legal y Financiera:</strong> La guía clara y sin jerga sobre los documentos que necesitas AHORA para proteger a tu familia y evitar pesadillas burocráticas.</li>
+                        <li><strong>Montar tu Equipo de Aliados:</strong> Descubre cómo movilizar a tu familia y amigos de manera efectiva, convirtiendo ofertas vagas de "ayuda" en apoyo real y concreto.</li>
+                        <li><strong>Dominar el Nuevo Idioma de la Demencia:</strong> Aprende las técnicas de comunicación que convierten la frustración en conexión, basadas en la validación y la empatía.</li>
+                        <li><strong>Cuidar del Cuidador:</strong> Te daré las estrategias de supervivencia para proteger tu propia salud mental y no quemarte en el proceso. Es lo más importante.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: VALOR GRATUITO -->
+    <section id="free-value">
+        <div class="container">
+            <h2>Empieza a tomar el control en los próximos 10 minutos.</h2>
+            <p class="subtitle">La sensación de impotencia es lo peor. Vamos a combatirla ahora mismo. Descarga mi guía de emergencia gratuita, el "Plan de Acción para las Primeras 48 Horas".</p>
+            
+            <div class="pdf-preview">
+                <h3>Lo que conseguirás al instante:</h3>
+                <ul>
+                    <li>Una técnica de 60 segundos para calmar el shock y recuperar la claridad.</li>
+                    <li>La única pregunta que DEBES hacerle al médico (y las que debes evitar por ahora).</li>
+                    <li>Un guion para proteger tu energía de las llamadas bienintencionadas pero agotadoras.</li>
+                    <li>La "Santísima Trinidad" legal que necesitas entender antes de hablar con un abogado.</li>
+                </ul>
+            </div>
+            
+            <a href="#final-cta" class="cta-button">DESCARGAR MI PLAN GRATUITO AHORA</a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: AUTOR -->
+    <section id="author">
+        <div class="narrow-container">
+            <div class="author-content">
+                <img src="https://raw.githubusercontent.com/ConMaria/El-d-a-que-se-rompi-el-mundo/main/FOTO%20MIMN%202024.jpg" alt="Foto de María Isabel Mateos" class="author-photo">
+                <div class="author-text">
+                    <h2>¿Por qué confiar en mí?</h2>
+                    <p>No soy médico, psicólogo ni un gurú. Soy María Isabel Mateos. Soy hija.</p>
+                    <p>He navegado cada etapa de este viaje. El diagnóstico. La negación de la familia. Las noches en vela. La burocracia. El dolor de ver cómo la persona que más quieres se va desvaneciendo frente a ti.</p>
+                    <p>Este libro es la guía que me habría salvado la cordura en los primeros meses. Es brutalmente honesto, increíblemente práctico y está escrito con la empatía de quien ha sentido exactamente el mismo miedo que sientes tú ahora. Mi única misión es que te sirva de faro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN FINAL: FORMULARIO -->
+    <section id="final-cta">
+        <div class="container">
+            <h2>Consigue tu guía y empieza a respirar.</h2>
+            <p>Introduce tu nombre y tu email para recibir inmediatamente el "Plan de Acción para las Primeras 48 Horas". También serás el primero en saber cuándo se publique el libro completo.</p>
+            
+            <!-- INICIO DEL CÓDIGO MAILERLITE INTEGRADO -->
+            <div class="form-container">
+                <div id="mlb2-28154098" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-28154098">
+                    <div class="ml-form-align-center">
+                        <div class="ml-form-embedWrapper embedForm">
+                            <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1647164/forms/159374923544921692/subscribe" data-code="" method="post" target="_blank">
+                                    <div class="ml-form-formContent">
+                                        <div class="ml-form-fieldRow">
+                                            <div class="ml-field-group ml-field-name">
+                                                <input aria-label="name" type="text" class="form-control" data-inputmask="" name="fields[name]" placeholder="Tu nombre" autocomplete="given-name">
+                                            </div>
+                                        </div>
+                                        <div class="ml-form-fieldRow ml-last-item">
+                                            <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                                                <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Tu mejor dirección de correo electrónico" autocomplete="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="ml-submit" value="1">
+                                    <div class="ml-form-embedSubmit">
+                                        <button type="submit" class="primary cta-button">ENVIARME EL PLAN</button>
+                                        <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                            Cargando...
+                                        </button>
+                                    </div>
+                                    <input type="hidden" name="anticsrf" value="true">
+                                </form>
+                            </div>
+                            <div class="ml-form-successBody row-success" style="display: none">
+                                <div class="ml-form-successContent">
+                                    <h4>¡Gracias!</h4>
+                                    <p><strong>Revisa tu bandeja de entrada. Te hemos enviado la guía.</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function ml_webform_success_28154098() {
+                        var $ = ml_jQuery || jQuery;
+                        $('.ml-subscribe-form-28154098 .row-success').show();
+                        $('.ml-subscribe-form-28154098 .row-form').hide();
+                    }
+                </script>
+                <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+            </div>
+            <!-- FIN DEL CÓDIGO MAILERLITE INTEGRADO -->
+
+        </div>
+    </section>
+
+</body>
+</html>
